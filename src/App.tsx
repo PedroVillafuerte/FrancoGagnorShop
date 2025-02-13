@@ -1,10 +1,15 @@
+import Footer from "./components/Product/Footer/Footer"
+import NavBar from "./components/Product/NavBar/NavBar"
+import Home from "./pages/Home"
 
 function App() {
 
 
   return (
     <>
-      <p>Novo Freela</p>
+      <NavBar></NavBar>
+      <Home></Home>
+      <Footer></Footer>
     </>
   )
 }
