@@ -1,7 +1,12 @@
 import { styled } from "@mui/material"
-import { FC, PropsWithChildren } from "react"
+import { FC, PropsWithChildren, ReactNode } from "react"
 
-const DefaultButton: FC<PropsWithChildren> = ({ children }) => {
+type ButtonProps = {
+    children: ReactNode
+    onClick?: () => void
+}
+
+const DefaultButton: React.FC<ButtonProps> = ({ children, onClick }) => {
     const DefaultButton = styled("button")(() => ({
         color: "rgba(50,40,15,90%)",
         backgroundColor: "transparent",
@@ -16,7 +21,7 @@ const DefaultButton: FC<PropsWithChildren> = ({ children }) => {
         }
     }))
     return (
-        <DefaultButton>{children}</DefaultButton>
+        <DefaultButton onClick={onClick}>{children}</DefaultButton>
     )
 }
 
