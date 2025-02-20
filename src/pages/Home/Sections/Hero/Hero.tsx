@@ -1,5 +1,6 @@
 import { Grid2, styled } from "@mui/material"
 import PlaceHolder from "../../../../assets/Imgs/PlaceHolder.jpg"
+import DefaultButton from "../../../../components/Buttons/DefaultButton"
 
 const Hero = () => {
 
@@ -9,8 +10,8 @@ const Hero = () => {
     }))
 
     const StyledImg = styled("img")(() => ({
-            height: '100%',
-            width: "100%",
+        height: '100%',
+        width: "100%",
     }))
 
     const StyledLogo = styled("div")(() => ({
@@ -20,24 +21,11 @@ const Hero = () => {
         paddingBottom: "2rem"
     }))
 
-    const StyledButton = styled("button")(() => ({
-        color: "rgba(50,40,15,90%)",
-        backgroundColor: "transparent",
-        border: `2px solid rgba(50,40,15,90%)`,
-        borderRadius: "5px",
-        padding: "10px 15px",
-        cursor: "pointer",
-        fontSize: "1rem",
-        '&:hover': {
-            backgroundColor: 'rgb(10,30,10)',
-            color: 'rgba(250,230,200,90%)'
-        }
-    }))
 
     const StyledDiv = styled("div")(() => ({
-            textAlign: "center",
-            marginLeft: "auto",
-            marginRight: "auto",        
+        textAlign: "center",
+        marginLeft: "auto",
+        marginRight: "auto",
     }))
 
     return (
@@ -50,7 +38,7 @@ const Hero = () => {
                 <Grid2 container size={{ xs: 12, md: 5 }} height={{ xs: '50vh', md: '100vh' }} alignItems="center">
                     <StyledDiv>
                         <StyledLogo>Franco Gagnor</StyledLogo>
-                        <StyledButton>Compre Agora!</StyledButton>
+                        <DefaultButton>Compre Agora!</DefaultButton>
                     </StyledDiv>
                 </Grid2>
             </Grid2>

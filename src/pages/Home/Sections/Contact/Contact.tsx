@@ -17,32 +17,31 @@ const Contact = () => {
     }))
 
     const StyledLink = styled("a")(() => ({
-        textDecoration:"none",
+        textDecoration: "none",
         cursor: "pointer",
-        fontSize:"2rem",
+        fontSize: "2rem",
         color: "rgba(50,40,15,90%)",
-        width:"max-content",
+        width: "max-content",
         '&:hover': {
             color: 'rgb(10,30,10)'
         }
     }))
 
     const StyledDiv = styled("div")(() => ({
-        display:"flex",
-        flexDirection:"column",
-        alignItems:"center",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
     }))
 
     const StyledTitle = styled("div")(() => ({
-        fontSize:"4rem",
+        fontSize: "4rem",
         fontFamily: "sans-serif",
-        padding:"1rem",
+        padding: "1rem",
         color: "rgba(50,40,15,90%)",
     }))
 
     return (
         <StyledHero>
-
             <Grid2 container sx={{ justifyContent: "space-between", alignItems: "center", textAlign: "center" }}>
                 <Grid2 size={{ xs: 12, md: 7 }} height={{ xs: '50vh', md: '100vh' }} alignItems="center">
                     <StyledTitle>Contatos</StyledTitle>
@@ -57,7 +56,6 @@ const Contact = () => {
                     <StyledImg src={PlaceHolder} />
                 </Grid2>
             </Grid2>
-
         </StyledHero>
     )
 }
