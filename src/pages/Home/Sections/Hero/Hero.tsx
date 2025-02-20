@@ -4,8 +4,8 @@ import DefaultButton from "../../../../components/Buttons/DefaultButton"
 
 const Hero = () => {
 
-    const StyledHero = styled("div")(() => ({
-        backgroundColor: "rgba(250,230,200,40%)",
+    const StyledHero = styled("div")(({ theme }) => ({
+        backgroundColor: theme.palette.primary.main,
         height: '100vh'
     }))
 
@@ -14,8 +14,8 @@ const Hero = () => {
         width: "100%",
     }))
 
-    const StyledLogo = styled("div")(() => ({
-        color: "rgba(50,40,15,90%)",
+    const StyledLogo = styled("div")(({ theme }) => ({
+        color: theme.palette.primary.contrastText,
         fontSize: "5rem",
         fontFamily: "sans-serif",
         paddingBottom: "2rem"

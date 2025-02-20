@@ -1,12 +1,11 @@
 import { Grid2, styled, Typography } from "@mui/material"
-import { green, red } from "@mui/material/colors"
 import AllProducts from '../../components/Product/AllProducts'
 import Product from "../../components/Product/Product"
 import Filter from "./ShopFilter"
 
 const Shop = () => {
-    const StyledProducts = styled('div')(() => ({
-        backgroundColor: green[500],
+    const StyledProducts = styled('div')(({ theme }) => ({
+        backgroundColor: theme.palette.primary.light,
         height: '100vh',
         overflowY: 'auto',
     }))

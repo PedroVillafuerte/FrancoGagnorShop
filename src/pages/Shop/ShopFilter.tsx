@@ -1,11 +1,10 @@
 import { Grid2, styled, Typography } from "@mui/material"
-import { red } from "@mui/material/colors"
 
 const Filter = () => {
-    const StyledFitler = styled('div')(() => ({
+    const StyledFitler = styled('div')(({ theme }) => ({
         display: 'flex',
         flexDirection: 'column',
-        backgroundColor: red[500],
+        backgroundColor: theme.palette.secondary.main,
         height: '100vh',
     }))
 

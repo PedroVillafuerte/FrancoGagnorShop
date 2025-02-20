@@ -7,17 +7,16 @@ type ButtonProps = {
 }
 
 const DefaultButton: React.FC<ButtonProps> = ({ children, onClick }) => {
-    const DefaultButton = styled("button")(() => ({
-        color: "rgba(50,40,15,90%)",
+    const DefaultButton = styled("button")(({ theme }) => ({
+        color: theme.palette.primary.contrastText,
         backgroundColor: "transparent",
-        border: `2px solid rgba(50,40,15,90%)`,
+        border: `2px solid ${theme.palette.primary.contrastText}`,
         borderRadius: "5px",
         padding: "10px 15px",
         cursor: "pointer",
         fontSize: "1rem",
         '&:hover': {
-            backgroundColor: 'rgb(10,30,10)',
-            color: 'rgba(250,230,200,90%)'
+            backgroundColor: theme.palette.secondary.main,
         }
     }))
     return (

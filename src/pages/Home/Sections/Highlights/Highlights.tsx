@@ -1,13 +1,13 @@
 import { styled } from "@mui/material"
 
 const Highlights = () => {
-    const StyledDiv = styled("div")(() => ({
+    const StyledDiv = styled("div")(({ theme }) => ({
         height: "100vh",
-        backgroundColor: "rgba(250,230,200,100%)"
+        backgroundColor: theme.palette.secondary.main
     }))
     return (
         <StyledDiv>
-            
+
         </StyledDiv>
     )
 }

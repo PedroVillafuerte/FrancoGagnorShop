@@ -22,8 +22,8 @@ const Product: React.FC<ProductProps> = (({ name, img, price, description, butto
     description = description ? description : "Descrição do produto"
     button = button ? button : { label: "Comprar", link: "https://www.google.com" }
 
-    const StyledProduct = styled('div')(() => ({
-        backgroundColor: 'blue',
+    const StyledProduct = styled('div')(({ theme }) => ({
+        backgroundColor: theme.palette.secondary.main,
         margin: '1vh',
         padding: '1vh',
     }))

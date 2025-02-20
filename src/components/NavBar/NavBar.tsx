@@ -1,5 +1,4 @@
 import { AppBar, Grid2, MenuItem, styled, Toolbar } from "@mui/material"
-import { blue, red } from "@mui/material/colors"
 import Logo from '../../assets/Imgs/LogoFG.jpg'
 import { Link } from "react-router-dom"
 
@@ -7,15 +6,14 @@ const NavBar = () => {
     const StyledToolbar = styled(Toolbar)(({ theme }) => ({
         justifyContent: 'space-between',
         padding: 24,
-        backgroundColor: blue[500],
+        backgroundColor: theme.palette.primary.dark,
         overflow: 'hidden',
     }))
     const StyledMenuIcon = styled(MenuItem)(({ theme }) => ({
-        color: "white",
+        color: theme.palette.primary.contrastText,
         textDecoration: 'none',
         '&:hover': {
             transform: 'scale(1.1)',
-            color: blue[900],
             cursor: 'pointer',
         },
     }))
@@ -38,7 +36,7 @@ const NavBar = () => {
                     </Grid2>
                     <Grid2 container>
                         <StyledMenuIcon >
-                            <Link to="/">
+                            <Link to="/" >
                                 Home
                             </Link>
                         </StyledMenuIcon>
