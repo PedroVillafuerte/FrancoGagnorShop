@@ -5,7 +5,6 @@ import DefaultButton from "../../../../components/Buttons/DefaultButton"
 const Hero = () => {
 
     const StyledHero = styled("div")(() => ({
-        backgroundColor: "rgba(250,230,200,40%)",
         height: '100vh',
         overflow:"hidden",
     }))
@@ -13,17 +12,16 @@ const Hero = () => {
     const StyledImg = styled("img")(({theme}) => ({
         display:"flex",
         height: '100vh',
-        [theme.breakpoints.up('xs')]: {
+        [theme.breakpoints.down('md')]: {
             objectFit:"cover",
-            margin:"0px 0px 0px -1728px"
+            margin:"0px 0px 0px -800px"
           },
     }))
 
     const StyledLogo = styled("div")(({ theme }) => ({
         color: theme.palette.primary.contrastText,
-        fontSize: "5rem",
-        fontFamily: "sans-serif",
-        paddingBottom: "2rem"
+        fontSize: "8vw",
+        paddingBottom: "1rem"
     }))
 
 
