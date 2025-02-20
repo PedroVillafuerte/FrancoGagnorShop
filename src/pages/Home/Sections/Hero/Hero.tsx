@@ -1,48 +1,48 @@
 import { Grid2, styled } from "@mui/material"
-import PlaceHolder from "../../../../assets/Imgs/PlaceHolder.jpg"
+import HeroImg from "../../../../assets/Imgs/HeroImg.jpg"
 import DefaultButton from "../../../../components/Buttons/DefaultButton"
 
 const Hero = () => {
 
     const StyledHero = styled("div")(() => ({
         backgroundColor: "rgba(250,230,200,40%)",
-        height: '100vh'
+        height: '100vh',
+        overflow:"hidden",
     }))
 
-    const StyledImg = styled("img")(() => ({
-        height: '100%',
-        width: "100%",
+    const StyledImg = styled("img")(({theme}) => ({
+        display:"flex",
+        height: '100vh',
+        [theme.breakpoints.up('xs')]: {
+            objectFit:"cover",
+            margin:"0px 0px 0px -1728px"
+          },
     }))
 
     const StyledLogo = styled("div")(() => ({
-        color: "rgba(50,40,15,90%)",
-        fontSize: "5rem",
-        fontFamily: "sans-serif",
-        paddingBottom: "2rem"
+        color: "rgba(250,230,200,80%)",
+        fontSize: "8vw",
+        paddingBottom: "1rem",
     }))
 
 
     const StyledDiv = styled("div")(() => ({
-        textAlign: "center",
-        marginLeft: "auto",
-        marginRight: "auto",
+        position: "absolute",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        alignSelf:"center"
     }))
 
     return (
         <StyledHero>
-
-            <Grid2 container sx={{ justifyContent: "space-between", alignItems: "center", textAlign: "center" }}>
-                <Grid2 size={{ xs: 12, md: 7 }} height={{ xs: '50vh', md: '100vh' }}>
-                    <StyledImg src={PlaceHolder} />
-                </Grid2>
-                <Grid2 container size={{ xs: 12, md: 5 }} height={{ xs: '50vh', md: '100vh' }} alignItems="center">
-                    <StyledDiv>
-                        <StyledLogo>Franco Gagnor</StyledLogo>
-                        <DefaultButton>Compre Agora!</DefaultButton>
-                    </StyledDiv>
-                </Grid2>
+            <Grid2 container display="flex" flexDirection="column" justifyContent="center">
+                <StyledImg src={HeroImg} />
+                <StyledDiv>
+                    <StyledLogo>Franco Gagnor</StyledLogo>
+                    <DefaultButton>Compre Agora!</DefaultButton>
+                </StyledDiv>
             </Grid2>
-
         </StyledHero>
     )
 }
