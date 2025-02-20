@@ -19,10 +19,11 @@ const Hero = () => {
           },
     }))
 
-    const StyledLogo = styled("div")(() => ({
-        color: "rgba(250,230,200,80%)",
-        fontSize: "8vw",
-        paddingBottom: "1rem",
+    const StyledLogo = styled("div")(({ theme }) => ({
+        color: theme.palette.primary.contrastText,
+        fontSize: "5rem",
+        fontFamily: "sans-serif",
+        paddingBottom: "2rem"
     }))
 
 

@@ -3,8 +3,9 @@ import PlaceHolder from "../../assets/Imgs/PlaceHolder.jpg"
 import DefaultButton from "../../components/Buttons/DefaultButton"
 
 const Contact = () => {
-    const StyledAbout = styled("div")(() => ({
-        backgroundColor: "rgba(250,230,200,40%)",
+    const StyledAbout = styled("div")(({ theme }) => ({
+        backgroundColor: theme.palette.primary.main,
+        color: theme.palette.primary.contrastText,
         height: '100vh',
         display: 'flex',
         alignItems: 'center',
@@ -15,10 +16,10 @@ const Contact = () => {
         width: "100%",
     }))
 
-    const StyledTitle = styled("div")(() => ({
+    const StyledTitle = styled("div")(({ theme }) => ({
         fontSize: "4rem",
         fontFamily: "sans-serif",
-        color: "rgba(50,40,15,90%)",
+        color: theme.palette.primary.contrastText,
     }))
 
     return (

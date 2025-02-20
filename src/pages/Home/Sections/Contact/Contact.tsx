@@ -6,8 +6,8 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 
 const Contact = () => {
-    const StyledHero = styled("div")(() => ({
-        backgroundColor: "rgba(250,230,200,40%)",
+    const StyledContact = styled("div")(({ theme }) => ({
+        backgroundColor: theme.palette.primary.main,
         height: '100vh'
     }))
 
@@ -16,14 +16,14 @@ const Contact = () => {
         width: "100%",
     }))
 
-    const StyledLink = styled("a")(() => ({
+    const StyledLink = styled("a")(({ theme }) => ({
         textDecoration: "none",
         cursor: "pointer",
         fontSize: "2rem",
-        color: "rgba(50,40,15,90%)",
+        color: theme.palette.secondary.main,
         width: "max-content",
         '&:hover': {
-            color: 'rgb(10,30,10)'
+
         }
     }))
 
@@ -33,15 +33,15 @@ const Contact = () => {
         alignItems: "center",
     }))
 
-    const StyledTitle = styled("div")(() => ({
+    const StyledTitle = styled("div")(({ theme }) => ({
         fontSize: "4rem",
         fontFamily: "sans-serif",
         padding: "1rem",
-        color: "rgba(50,40,15,90%)",
+        color: theme.palette.primary.contrastText,
     }))
 
     return (
-        <StyledHero>
+        <StyledContact>
             <Grid2 container sx={{ justifyContent: "space-between", alignItems: "center", textAlign: "center" }}>
                 <Grid2 size={{ xs: 12, md: 7 }} height={{ xs: '50vh', md: '100vh' }} alignItems="center">
                     <StyledTitle>Contatos</StyledTitle>
@@ -56,7 +56,7 @@ const Contact = () => {
                     <StyledImg src={PlaceHolder} />
                 </Grid2>
             </Grid2>
-        </StyledHero>
+        </StyledContact>
     )
 }
 

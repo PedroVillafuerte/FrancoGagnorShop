@@ -5,15 +5,15 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 
 const Footer = () => {
-    const StyledFooter = styled("div")(() => ({
+    const StyledFooter = styled("div")(({ theme }) => ({
         display: 'flex',
-        backgroundColor: "rgba(250,230,200,100%)",
-        color: "rgba(50,40,15,90%)",
+        backgroundColor: theme.palette.primary.dark,
+        color: theme.palette.primary.contrastText,
         padding: '20px',
     }))
 
-    const StyledLink = styled('a')(() => ({
-        color: "rgba(50,40,15,90%)",
+    const StyledLink = styled('a')(({ theme }) => ({
+        color: theme.palette.secondary.main,
         textDecoration: 'none',
         '&:hover': {
             cursor: 'pointer',
