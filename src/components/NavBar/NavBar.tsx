@@ -1,6 +1,6 @@
 import { AppBar, Grid2, MenuItem, styled, Toolbar } from "@mui/material"
 import { blue, red } from "@mui/material/colors"
-import Logo from '../../../assets/Imgs/LogoFG.jpg'
+import Logo from '../../assets/Imgs/LogoFG.jpg'
 import { Link } from "react-router-dom"
 
 const NavBar = () => {
