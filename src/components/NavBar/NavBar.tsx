@@ -32,7 +32,9 @@ const NavBar = () => {
             <AppBar position="sticky">
                 <StyledToolbar id="navbar">
                     <Grid2 container>
-                        <StyledLogo src={Logo} loading="lazy" />
+                        <Link to="/">
+                            <StyledLogo src={Logo} loading="lazy" />
+                        </Link>
                     </Grid2>
                     <Grid2 container>
                         <StyledMenuIcon >
