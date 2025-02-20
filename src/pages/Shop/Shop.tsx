@@ -2,13 +2,9 @@ import { Grid2, styled, Typography } from "@mui/material"
 import { green, red } from "@mui/material/colors"
 import AllProducts from '../../components/Product/AllProducts'
 import Product from "../../components/Product/Product"
+import Filter from "./ShopFilter"
 
 const Shop = () => {
-    const StyledFitler = styled('div')(() => ({
-        backgroundColor: red[500],
-        height: '100vh',
-    }))
-
     const StyledProducts = styled('div')(() => ({
         backgroundColor: green[500],
         height: '100vh',
@@ -18,9 +14,7 @@ const Shop = () => {
     return (
         <Grid2 container>
             <Grid2 size={3}>
-                <StyledFitler>
-                    Filtro
-                </StyledFitler>
+                <Filter />
             </Grid2><Grid2 size={9}>
                 <StyledProducts>
                     <Typography textAlign={'center'} variant="h2">Produtos</Typography>
