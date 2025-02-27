@@ -46,7 +46,7 @@ const Footer = () => {
                     </Grid2>
                 </Grid2>
                 <Grid2>
-                    <Typography maxWidth={'max-content'} borderTop={1} paddingTop={1} marginTop={1} marginLeft={'auto'} marginRight={'auto'}>
+                    <Typography maxWidth={'max-content'} borderTop={1} pt={2} mt={2} marginLeft={'auto'} marginRight={'auto'}>
                         © Franco Gagnor - All rights reserved.
                     </Typography>
                 </Grid2>

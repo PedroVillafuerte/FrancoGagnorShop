@@ -1,5 +1,5 @@
 import { AppBar, Grid2, MenuItem, styled, Toolbar } from "@mui/material"
-import Logo from '../../assets/Imgs/LogoFG.jpg'
+import Logo2 from '../../assets/Imgs/FGLowRes-NoBg-Light.png'
 import { Link } from "react-router-dom"
 
 const NavBar = () => {
@@ -31,7 +31,7 @@ const NavBar = () => {
                 <StyledToolbar id="navbar">
                     <Grid2 container>
                         <Link to="/">
-                            <StyledLogo src={Logo} loading="lazy" />
+                            <StyledLogo src={Logo2} loading="lazy" />
                         </Link>
                     </Grid2>
                     <Grid2 container>
