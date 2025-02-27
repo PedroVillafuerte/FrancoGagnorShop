@@ -12,7 +12,7 @@ const Highlights = () => {
           },
     }))
 
-    const StyledImg = styled("img")(({ theme }) => ({
+    const StyledImg = styled("img")(() => ({
         height: '100%',
         width: "100%",
     }))
