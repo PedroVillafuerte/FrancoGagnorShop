@@ -5,19 +5,17 @@ import { Button } from '@mui/material'
 type CategoryButtonProps = {
   category: string
   children: React.ReactNode
+  disabled?: boolean
 }
 
-const CategoryButton: React.FC<CategoryButtonProps> = ({ category, children }) => {
-  const { products, allProducts, setProducts } = useShopContext()
-  const FilterItemsByCategory = (cat: string) => {
-    setProducts(
-      allProducts.filter((product) => {
-        return product.category.toLowerCase().includes(cat.toLowerCase())
-      })
-    )
-    console.log(products)
-  }
-  return <Button onClick={() => FilterItemsByCategory(category)}>{children}</Button>
+const CategoryButton: React.FC<CategoryButtonProps> = ({ category, children, disabled }) => {
+  const { FilterItemsByCategory, currentCategory } = useShopContext()
+  console.log(currentCategory)
+  return (
+    <Button onClick={() => FilterItemsByCategory(category)} disabled={disabled}>
+      {children}
+    </Button>
+  )
 }
 
 export default CategoryButton

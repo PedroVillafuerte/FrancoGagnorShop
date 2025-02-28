@@ -1,15 +1,16 @@
-import Contact from "./Sections/Contact/Contact"
-import Hero from "./Sections/Hero/Hero"
-import Highlights from "./Sections/Highlights/Highlights"
+import { ShopContextProvider } from '../../contexts/ShopContext'
+import Contact from './Sections/Contact/Contact'
+import Hero from './Sections/Hero/Hero'
+import Highlights from './Sections/Highlights/Highlights'
 
 const Home = () => {
-    return(
-        <>
-        <Hero/>
-        <Highlights/>
-        <Contact/>
-        </>
-    )
+  return (
+    <>
+      <Hero />
+      <Highlights />
+      <Contact />
+    </>
+  )
 }
 
 export default Home

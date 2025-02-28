@@ -12,20 +12,7 @@ const StyledFitler = styled('div')(({ theme }) => ({
 
 const Filter = () => {
   const [filterInput, setFilterInput] = useState('')
-  const { allProducts, setProducts, categories } = useShopContext()
-
-  const FilterItemsByName = (value: string) => {
-    if (value === '') {
-      setProducts(allProducts)
-    } else {
-      setProducts(
-        allProducts.filter((product) => {
-          return product.name.toLowerCase().includes(value.toLowerCase())
-        })
-      )
-    }
-    console.log('foi')
-  }
+  const { currentCategory, categories, FilterItemsByName } = useShopContext()
 
   return (
     <>
@@ -36,18 +23,16 @@ const Filter = () => {
             <Button onClick={() => FilterItemsByName(filterInput)}>Pesquisar</Button>
           </Grid2>
           {categories.map((category) => {
-            return <CategoryButton category={category}>{category}</CategoryButton>
+            return (
+              <CategoryButton category={category} disabled={category === currentCategory}>
+                {category}
+              </CategoryButton>
+            )
           })}
         </Grid2>
       </StyledFitler>
     </>
   )
 }
-
-// export function useFilter(inputValue: string) {
-//   const [filterInput, setFilterInput] = useState(inputValue)
-
-//   return [filterInput, <Filter filterInput={filterInput} setFilterInput={setFilterInput} />]
-// }
 
 export default Filter

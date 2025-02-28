@@ -23,11 +23,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/shop',
-        element: (
-          <ShopContextProvider>
-            <Shop />
-          </ShopContextProvider>
-        ),
+        element: <Shop />,
       },
       {
         path: '/about',
@@ -40,8 +36,10 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <RouterProvider router={router} />
+      <ShopContextProvider>
+        <CssBaseline />
+        <RouterProvider router={router} />
+      </ShopContextProvider>
     </ThemeProvider>
   </StrictMode>
 )
