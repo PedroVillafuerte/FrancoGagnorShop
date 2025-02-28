@@ -5,8 +5,13 @@ import { useShopContext } from '../../contexts/ShopContext'
 import { useState } from 'react'
 
 const Shop = () => {
-  const { products } = useShopContext()
+  const StyledProducts = styled('div')(({ theme }) => ({
+    backgroundColor: theme.palette.primary.light,
+    height: '100%',
+    minHeight: '100vh',
+  }))
 
+  const { products } = useShopContext()
   const productsPerPage = 8
   const totalPages = Math.ceil(products.length / productsPerPage)
   const [currentPage, setCurrentPage] = useState(1)
@@ -36,23 +41,17 @@ const Shop = () => {
   }
   const currentPagesProducts = products.slice((currentPage - 1) * productsPerPage, currentPage * productsPerPage)
 
-  const StyledProducts = styled('div')(({ theme }) => ({
-    backgroundColor: theme.palette.primary.light,
-    height: '100vh',
-    overflowY: 'auto',
-  }))
-
   return (
     <Grid2 container>
-      <Grid2 size={3}>
+      <Grid2 display={'flex'} size={3} alignItems={'stretch'}>
         <Filter />
       </Grid2>
-      <Grid2 size={9}>
+      <Grid2 size={9} height={'100%'}>
         <StyledProducts>
           <Typography textAlign={'center'} variant="h2">
             Produtos
           </Typography>
-          <Grid2 container margin={5}>
+          <Grid2 container padding={5}>
             {currentPagesProducts.map((product) => {
               return (
                 <Grid2 key={product.id} size={3}>
@@ -62,7 +61,7 @@ const Shop = () => {
             })}
           </Grid2>
         </StyledProducts>
-        <Grid2 display={'flex'} justifyContent={'center'} alignItems={'end'}>
+        <Grid2 display={'flex'} justifyContent={'center'}>
           <button onClick={() => handlePageChange(currentPage - 1)}>{'<'}</button>
           {pages}
           <button onClick={() => handlePageChange(currentPage + 1)}>{'>'}</button>
