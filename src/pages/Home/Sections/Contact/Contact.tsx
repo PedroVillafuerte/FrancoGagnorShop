@@ -22,15 +22,19 @@ const Contact = () => {
         fontSize: "2rem",
         color: theme.palette.secondary.main,
         width: "max-content",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        alignSelf:"center",
         '&:hover': {
 
         }
     }))
 
-    const StyledDiv = styled("div")(() => ({
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
+    const StyledLinks = styled("div")(({ theme }) => ({
+        border: "solid 5px",
+        borderRadius: "50px",
+        borderColor: theme.palette.secondary.main
     }))
 
     const StyledTitle = styled("div")(({ theme }) => ({
@@ -40,17 +44,40 @@ const Contact = () => {
         color: theme.palette.primary.contrastText,
     }))
 
+    const StyledSubText = styled("div")(({ theme }) => ({
+        fontSize: "1rem",
+        color: theme.palette.secondary.main,
+    }))
+
     return (
         <StyledContact>
             <Grid2 container sx={{ justifyContent: "space-between", alignItems: "center", textAlign: "center" }}>
                 <Grid2 size={{ xs: 12, md: 7 }} height={{ xs: '50vh', md: '100vh' }} alignItems="center">
                     <StyledTitle>Contatos</StyledTitle>
-                    <StyledDiv>
-                        <StyledLink href="https://web.whatsapp.com/send/?phone=5521984935124"><WhatsAppIcon /> WhatsApp</StyledLink>
-                        <StyledLink href="https://shopee.com.br/francogagnor"><LocalMallIcon /> Shopee</StyledLink>
-                        <StyledLink href="https://www.instagram.com/francogagnor/"><InstagramIcon /> Instagram</StyledLink>
-                        <StyledLink href="https://www.facebook.com/francogagnorig.com.br/"><FacebookIcon /> Facebook</StyledLink>
-                    </StyledDiv>
+                    <StyledLinks>
+                        <Grid2 container display={"flex"} flexDirection={'row'} justifyContent={'space-evenly'}>
+                            <Grid2 size={6} display='flex' alignSelf={'center'}>
+                                <StyledLink href="https://web.whatsapp.com/send/?phone=5521984935124">
+                                    <WhatsAppIcon /> WhatsApp <StyledSubText>+21 99999-9999</StyledSubText>
+                                </StyledLink>
+                            </Grid2>
+                            <Grid2 size={6}>
+                                <StyledLink href="https://shopee.com.br/francogagnor">
+                                    <LocalMallIcon /> Shopee <StyledSubText>/francogagnor</StyledSubText>
+                                </StyledLink>
+                            </Grid2>
+                            <Grid2 size={6}>
+                                <StyledLink href="https://www.instagram.com/francogagnor/">
+                                    <InstagramIcon /> Instagram <StyledSubText>/francogagnor</StyledSubText>
+                                </StyledLink>
+                            </Grid2>
+                            <Grid2 size={6}>
+                                <StyledLink href="https://www.facebook.com/francogagnorig.com.br/">
+                                    <FacebookIcon /> Facebook <StyledSubText>/francogagnorig.com.br</StyledSubText>
+                                </StyledLink>
+                            </Grid2>
+                        </Grid2>
+                    </StyledLinks>
                 </Grid2>
                 <Grid2 container size={{ xs: 12, md: 5 }} height={{ xs: '50vh', md: '100vh' }} alignItems="center">
                     <StyledImg src={PlaceHolder} />
