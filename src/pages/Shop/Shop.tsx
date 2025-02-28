@@ -1,11 +1,10 @@
 import { Grid2, styled, Typography } from '@mui/material'
-import AllProducts from '../../components/Product/AllProducts'
 import Product from '../../components/Product/Product'
-import { useState } from 'react'
 import Filter from './ShopFilter'
+import { useShopContext } from '../../contexts/ShopContext'
 
 const Shop = () => {
-  const [products, setProducts] = useState(AllProducts)
+  const { products } = useShopContext()
 
   const StyledProducts = styled('div')(({ theme }) => ({
     backgroundColor: theme.palette.primary.light,
@@ -13,23 +12,10 @@ const Shop = () => {
     overflowY: 'auto',
   }))
 
-  const FilterItems = (value: string) => {
-    if (value === '') {
-      setProducts(AllProducts)
-    } else {
-      setProducts(
-        AllProducts.filter((product) => {
-          return product.name.toLowerCase().includes(value.toLowerCase())
-        })
-      )
-    }
-    console.log('foi')
-  }
-
   return (
     <Grid2 container>
       <Grid2 size={3}>
-        <Filter filterItems={FilterItems} />
+        <Filter />
       </Grid2>
       <Grid2 size={9}>
         <StyledProducts>

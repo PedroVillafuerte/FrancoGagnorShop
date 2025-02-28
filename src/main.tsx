@@ -9,6 +9,7 @@ import Home from './pages/Home/Home.tsx'
 import Shop from './pages/Shop/Shop.tsx'
 import ErrorPage from './pages/ErrorPage/ErrorPage.tsx'
 import About from './pages/About/About.tsx'
+import { ShopContextProvider } from './contexts/ShopContext.tsx'
 
 const router = createBrowserRouter([
   {
@@ -22,13 +23,17 @@ const router = createBrowserRouter([
       },
       {
         path: '/shop',
-        element: <Shop />,
+        element: (
+          <ShopContextProvider>
+            <Shop />
+          </ShopContextProvider>
+        ),
       },
       {
         path: '/about',
         element: <About />,
-      }
-    ]
+      },
+    ],
   },
 ])
 
@@ -38,5 +43,5 @@ createRoot(document.getElementById('root')!).render(
       <CssBaseline />
       <RouterProvider router={router} />
     </ThemeProvider>
-  </StrictMode>,
+  </StrictMode>
 )
