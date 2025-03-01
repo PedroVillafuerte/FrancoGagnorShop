@@ -50,7 +50,7 @@ const AllProducts = [
     },
   },
   {
-    id: '3',
+    id: '4',
     category: 'Categoria4',
     name: 'Produto4',
     img: placeHolder,
@@ -62,7 +62,7 @@ const AllProducts = [
     },
   },
   {
-    id: '3',
+    id: '5',
     category: 'Categoria4',
     name: 'Produto4',
     img: placeHolder,
@@ -74,7 +74,7 @@ const AllProducts = [
     },
   },
   {
-    id: '3',
+    id: '6',
     category: 'Categoria4',
     name: 'Produto4',
     img: placeHolder,
@@ -86,7 +86,7 @@ const AllProducts = [
     },
   },
   {
-    id: '3',
+    id: '7',
     category: 'Categoria4',
     name: 'Produto4',
     img: placeHolder,
@@ -98,7 +98,7 @@ const AllProducts = [
     },
   },
   {
-    id: '3',
+    id: '8',
     category: 'Categoria4',
     name: 'Produto4',
     img: placeHolder,
@@ -110,7 +110,7 @@ const AllProducts = [
     },
   },
   {
-    id: '3',
+    id: '9',
     category: 'Categoria4',
     name: 'Produto4',
     img: placeHolder,
@@ -122,7 +122,7 @@ const AllProducts = [
     },
   },
   {
-    id: '3',
+    id: '10',
     category: 'Categoria4',
     name: 'Produto4',
     img: placeHolder,
@@ -134,7 +134,7 @@ const AllProducts = [
     },
   },
   {
-    id: '3',
+    id: '11',
     category: 'Categoria4',
     name: 'Produto4',
     img: placeHolder,
@@ -146,7 +146,7 @@ const AllProducts = [
     },
   },
   {
-    id: '3',
+    id: '12',
     category: 'Categoria4',
     name: 'Produto4',
     img: placeHolder,
@@ -158,7 +158,7 @@ const AllProducts = [
     },
   },
   {
-    id: '3',
+    id: '13',
     category: 'Categoria4',
     name: 'Produto4',
     img: placeHolder,
@@ -170,7 +170,7 @@ const AllProducts = [
     },
   },
   {
-    id: '3',
+    id: '14',
     category: 'Categoria4',
     name: 'Produto4',
     img: placeHolder,
@@ -182,7 +182,7 @@ const AllProducts = [
     },
   },
   {
-    id: '3',
+    id: '15',
     category: 'Categoria4',
     name: 'Produto4',
     img: placeHolder,
@@ -194,7 +194,7 @@ const AllProducts = [
     },
   },
   {
-    id: '3',
+    id: '16',
     category: 'Categoria4',
     name: 'Produto4',
     img: placeHolder,
@@ -206,7 +206,7 @@ const AllProducts = [
     },
   },
   {
-    id: '3',
+    id: '17',
     category: 'Categoria4',
     name: 'Produto4',
     img: placeHolder,
@@ -218,7 +218,19 @@ const AllProducts = [
     },
   },
   {
-    id: '3',
+    id: '18',
+    category: 'Categoria4',
+    name: 'Produto4',
+    img: placeHolder,
+    price: 100,
+    description: 'Descição do Produto1 completa',
+    button: {
+      label: 'Comprar',
+      link: 'https://www.google.com',
+    },
+  },
+  {
+    id: '19',
     category: 'Categoria4',
     name: 'Produto4',
     img: placeHolder,
