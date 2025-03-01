@@ -1,4 +1,3 @@
-import { ShopContextProvider } from '../../contexts/ShopContext'
 import Contact from './Sections/Contact/Contact'
 import Hero from './Sections/Hero/Hero'
 import Highlights from './Sections/Highlights/Highlights'

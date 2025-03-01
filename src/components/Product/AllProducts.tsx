@@ -3,7 +3,7 @@ import placeHolder from '../../assets/Imgs/LogoFG.jpg'
 const AllProducts = [
   {
     id: '0',
-    category: 'Categoria1',
+    category: 'Substratos para aquários',
     name: 'Produto1',
     img: placeHolder,
     price: 100,
@@ -15,7 +15,7 @@ const AllProducts = [
   },
   {
     id: '1',
-    category: 'Categoria2',
+    category: 'Condicionadores de água',
     name: 'Produto2',
     img: placeHolder,
     price: 100,
@@ -27,7 +27,7 @@ const AllProducts = [
   },
   {
     id: '2',
-    category: 'Categoria3',
+    category: 'Bonsais e Terrários',
     name: 'Produto3',
     img: placeHolder,
     price: 100,
@@ -39,7 +39,7 @@ const AllProducts = [
   },
   {
     id: '3',
-    category: 'Categoria4',
+    category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
     price: 100,
@@ -51,7 +51,7 @@ const AllProducts = [
   },
   {
     id: '4',
-    category: 'Categoria4',
+    category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
     price: 100,
@@ -63,7 +63,7 @@ const AllProducts = [
   },
   {
     id: '5',
-    category: 'Categoria4',
+    category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
     price: 100,
@@ -75,7 +75,7 @@ const AllProducts = [
   },
   {
     id: '6',
-    category: 'Categoria4',
+    category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
     price: 100,
@@ -87,7 +87,7 @@ const AllProducts = [
   },
   {
     id: '7',
-    category: 'Categoria4',
+    category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
     price: 100,
@@ -99,7 +99,7 @@ const AllProducts = [
   },
   {
     id: '8',
-    category: 'Categoria4',
+    category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
     price: 100,
@@ -111,7 +111,7 @@ const AllProducts = [
   },
   {
     id: '9',
-    category: 'Categoria4',
+    category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
     price: 100,
@@ -123,7 +123,7 @@ const AllProducts = [
   },
   {
     id: '10',
-    category: 'Categoria4',
+    category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
     price: 100,
@@ -135,7 +135,7 @@ const AllProducts = [
   },
   {
     id: '11',
-    category: 'Categoria4',
+    category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
     price: 100,
@@ -147,7 +147,7 @@ const AllProducts = [
   },
   {
     id: '12',
-    category: 'Categoria4',
+    category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
     price: 100,
@@ -159,7 +159,7 @@ const AllProducts = [
   },
   {
     id: '13',
-    category: 'Categoria4',
+    category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
     price: 100,
@@ -171,7 +171,7 @@ const AllProducts = [
   },
   {
     id: '14',
-    category: 'Categoria4',
+    category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
     price: 100,
@@ -183,7 +183,7 @@ const AllProducts = [
   },
   {
     id: '15',
-    category: 'Categoria4',
+    category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
     price: 100,
@@ -195,7 +195,7 @@ const AllProducts = [
   },
   {
     id: '16',
-    category: 'Categoria4',
+    category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
     price: 100,
@@ -207,7 +207,7 @@ const AllProducts = [
   },
   {
     id: '17',
-    category: 'Categoria4',
+    category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
     price: 100,
@@ -219,7 +219,7 @@ const AllProducts = [
   },
   {
     id: '18',
-    category: 'Categoria4',
+    category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
     price: 100,
@@ -231,7 +231,7 @@ const AllProducts = [
   },
   {
     id: '19',
-    category: 'Categoria4',
+    category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
     price: 100,
