@@ -2,7 +2,6 @@ import { Grid2, styled, Typography } from '@mui/material'
 import Product from '../../components/Product/Product'
 import Filter from './ShopFilter'
 import { useShopContext } from '../../contexts/ShopContext'
-import { useState } from 'react'
 
 const Shop = () => {
   const StyledProducts = styled('div')(({ theme }) => ({
@@ -11,19 +10,18 @@ const Shop = () => {
     minHeight: '100vh',
   }))
 
-  const { products } = useShopContext()
+  const { products, currentPage, setCurrentPage } = useShopContext()
   const productsPerPage = 8
   const totalPages = Math.ceil(products.length / productsPerPage)
-  const [currentPage, setCurrentPage] = useState(1)
 
   const handlePageChange = (page: number) => {
-    if (page > 0 && page < totalPages) {
+    if (page > 0 && page <= totalPages) {
       setCurrentPage(page)
     }
   }
-
   const pages = []
-  const startPage = Math.min(Math.max(1, currentPage - 2), totalPages - 5)
+  const startPage = Math.min(Math.max(1, currentPage - 2), Math.max(1, totalPages - 4))
+  console.log(currentPage)
   for (let i = startPage; i < startPage + 5; i++) {
     if (i > totalPages) break
     if (i <= 0) continue

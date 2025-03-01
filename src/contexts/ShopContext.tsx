@@ -24,6 +24,8 @@ export const ShopContextProvider: FC<PropsWithChildren> = ({ children }) => {
   const allProducts = AllProducts
 
   const FilterItemsByName = (value: string) => {
+    setCurrentCategory('')
+    setCurrentPage(1)
     if (value === '') {
       setProducts(allProducts)
     } else {
@@ -33,17 +35,18 @@ export const ShopContextProvider: FC<PropsWithChildren> = ({ children }) => {
         })
       )
     }
-    console.log('foi')
   }
 
   const FilterItemsByCategory = (cat: string) => {
+    setCurrentPage(1)
     setCurrentCategory(cat)
+    console.log(currentPage)
+
     setProducts(
       allProducts.filter((product) => {
         return product.category.toLowerCase().includes(cat.toLowerCase())
       })
     )
-    console.log(currentCategory)
   }
 
   return (

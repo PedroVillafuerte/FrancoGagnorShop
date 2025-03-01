@@ -9,8 +9,7 @@ type CategoryButtonProps = {
 }
 
 const CategoryButton: React.FC<CategoryButtonProps> = ({ category, children, disabled }) => {
-  const { FilterItemsByCategory, currentCategory } = useShopContext()
-  console.log(currentCategory)
+  const { FilterItemsByCategory } = useShopContext()
   return (
     <Button onClick={() => FilterItemsByCategory(category)} disabled={disabled}>
       {children}
