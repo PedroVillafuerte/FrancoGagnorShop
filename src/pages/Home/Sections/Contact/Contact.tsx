@@ -1,20 +1,20 @@
-import { Grid2, styled } from "@mui/material"
-import PlaceHolder from "../../../../assets/Imgs/PlaceHolder.jpg"
-import LocalMallIcon from '@mui/icons-material/LocalMall';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
+import { Grid2, styled } from '@mui/material'
+import PlaceHolder from '../../../../assets/Imgs/PlaceHolder.jpg'
+import LocalMallIcon from '@mui/icons-material/LocalMall'
+import WhatsAppIcon from '@mui/icons-material/WhatsApp'
+import InstagramIcon from '@mui/icons-material/Instagram'
+import FacebookIcon from '@mui/icons-material/Facebook'
 
 const Contact = () => {
-    const StyledContact = styled("div")(({ theme }) => ({
-        backgroundColor: theme.palette.primary.main,
-        height: '100vh'
-    }))
+  const StyledContact = styled('div')(({ theme }) => ({
+    backgroundColor: theme.palette.primary.main,
+    height: '100vh',
+  }))
 
-    const StyledImg = styled("img")(() => ({
-        height: '100%',
-        width: "100%",
-    }))
+  const StyledImg = styled('img')(() => ({
+    height: '100%',
+    width: '100%',
+  }))
 
     const StyledLink = styled("a")(({ theme }) => ({
         textDecoration: "none",
