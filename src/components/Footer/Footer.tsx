@@ -13,7 +13,7 @@ const Footer = () => {
   }))
 
   const StyledLink = styled('a')(({ theme }) => ({
-    color: theme.palette.secondary.main,
+    color: theme.palette.primary.contrastText,
     textDecoration: 'none',
     '&:hover': {
       cursor: 'pointer',

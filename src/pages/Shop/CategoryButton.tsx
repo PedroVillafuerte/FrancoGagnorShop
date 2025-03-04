@@ -1,6 +1,6 @@
 import React from 'react'
 import { useShopContext } from '../../contexts/ShopContext'
-import { Button } from '@mui/material'
+import { Button, styled } from '@mui/material'
 
 type CategoryButtonProps = {
   category: string
@@ -10,8 +10,20 @@ type CategoryButtonProps = {
 
 const CategoryButton: React.FC<CategoryButtonProps> = ({ category, children, disabled }) => {
   const { FilterItemsByCategory } = useShopContext()
+
+  const StyledButton = styled(Button)(({ theme }) => ({
+    padding: '10px 5px ',
+    borderRadius: '0px',
+    borderTop: '1px solid',
+    borderColor: theme.palette.secondary.contrastText,
+    width: '100%',
+    ':disabled': {
+      backgroundColor: theme.palette.primary.light,
+    },
+  }))
+
   return (
-    <Button
+    <StyledButton
       onClick={() => {
         FilterItemsByCategory(category)
         window.scrollTo(0, 0)
@@ -19,7 +31,7 @@ const CategoryButton: React.FC<CategoryButtonProps> = ({ category, children, dis
       disabled={disabled}
     >
       {children}
-    </Button>
+    </StyledButton>
   )
 }
 

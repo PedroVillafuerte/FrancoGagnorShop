@@ -1,6 +1,5 @@
 import { Grid2, styled, Typography } from '@mui/material'
 import PlaceHolder from '../../assets/Imgs/Aquario4.png'
-import DefaultButton from '../../components/Buttons/DefaultButton'
 
 const Contact = () => {
   const StyledAbout = styled('div')(({ theme }) => ({
@@ -19,7 +18,7 @@ const Contact = () => {
   const StyledTitle = styled('div')(({ theme }) => ({
     fontSize: '4rem',
     fontFamily: 'sans-serif',
-    color: theme.palette.primary.contrastText,
+    color: theme.palette.secondary.contrastText,
   }))
 
   return (
@@ -28,13 +27,17 @@ const Contact = () => {
         <Grid2 size={7} display={'flex'} flexDirection={'column'} alignItems={'center'} justifyContent={'center'}>
           <Grid2 size={6}>
             <StyledTitle>Sobre Nós</StyledTitle>
-            <Typography textAlign={'left'} mt={10} mb={10}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <Typography color="secondary.contrastText" textAlign={'left'} mt={10} mb={10}>
+              Aquarista desde a infância, tem como hobby o cultivo de plantas aquáticas. Sócio fundador da ACAPI ( Associação Carioca de Aquariofilia, Piscicultura e Ictiologia )
+              que difundiu a aquariofilia a nível nacional e serviu de modelo para outras associações no Brasil até o final da década de 1970. Sócio fundador e diretor técnico da
+              firma AQUABRÁS LTDA, que liderou a indústria durante a década de 1960, da qual se desligou em 1970. Percebendo a necessidade do mercado e a total falta de
+              fornecedores de substratos para aquário, (na época, no Rio de Janeiro, utilizava-se apenas areia de praia, que o aquarista carioca geralmente pegava na Praia
+              Vermelha) iniciou o beneficiamento da areia da praia de Itaipuaçu (de granulação bem mais grossa) e em 1972 fundou a empresa FRANCO GAGNOR para comercializar
+              legalmente a areia grossa pintada, que produzia de maneira informal. Com a evolução normal da empresa e para atender a demanda do mercado, especializou-se na produção
+              de substratos para aquários, inclusive alguns com funções e usos bem específicos. Seu trabalho sempre foi pautado pela ética, responsabilidade, respeito ao meio
+              ambiente, ao ser humano e principalmente ao consumidor final, procurando atender às suas necessidades; com produtos adequados, limpos, nas granulometrias apropriadas
+              e em embalagens resistentes sem sofisticação desnecessária mas por um preço honesto.
             </Typography>
-
-            {/* <DefaultButton>Saiba mais</DefaultButton> */}
           </Grid2>
         </Grid2>
         <Grid2 size={5}>

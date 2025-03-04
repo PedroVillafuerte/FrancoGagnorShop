@@ -42,12 +42,12 @@ const Shop = () => {
 
   return (
     <Grid2 container>
-      <Grid2 display={'flex'} size={3} alignItems={'stretch'}>
+      <Grid2 display={'flex'} size={2} alignItems={'stretch'}>
         <Filter />
       </Grid2>
-      <Grid2 size={9} height={'100%'}>
+      <Grid2 size={10} height={'100%'}>
         <StyledProducts>
-          <Typography textAlign={'center'} variant="h2">
+          <Typography color="secondary.contrastText" textAlign={'center'} variant="h2" fontWeight={'400'}>
             Produtos
           </Typography>
           <Grid2 container padding={5}>

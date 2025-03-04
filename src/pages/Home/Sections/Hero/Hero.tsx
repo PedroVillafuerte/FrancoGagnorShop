@@ -1,7 +1,6 @@
-import { Grid2, styled } from '@mui/material'
+import { Grid2, styled, Typography } from '@mui/material'
 import HeroImg from '../../../../assets/Imgs/HeroImg.jpg'
 import DefaultButton from '../../../../components/Buttons/DefaultButton'
-import { Link } from 'react-router-dom'
 import { ScrollTo } from '../../../../components/NavBar/NavBar'
 
 const Hero = () => {
@@ -13,6 +12,7 @@ const Hero = () => {
   const StyledImg = styled('img')(({ theme }) => ({
     display: 'flex',
     height: '100vh',
+    filter: 'blur(2px)',
     [theme.breakpoints.down('md')]: {
       objectFit: 'cover',
       margin: '0px 0px 0px -800px',
@@ -38,7 +38,11 @@ const Hero = () => {
       <Grid2 container display="flex" flexDirection="column" justifyContent="center">
         <StyledImg src={HeroImg} />
         <StyledDiv>
-          <StyledLogo>Franco Gagnor</StyledLogo>
+          <StyledLogo>
+            <Typography fontSize={150} letterSpacing={2.5} fontWeight={'light'}>
+              Franco Gagnor
+            </Typography>
+          </StyledLogo>
           <DefaultButton onClick={() => ScrollTo('highlights')}>Compre Agora!</DefaultButton>
         </StyledDiv>
       </Grid2>

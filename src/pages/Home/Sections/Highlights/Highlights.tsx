@@ -13,7 +13,7 @@ const Highlights = () => {
 
   const StyledHighLight = styled('div')(({ theme }) => ({
     height: '100vh',
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: theme.palette.primary.light,
     [theme.breakpoints.down('md')]: {
       height: '100%',
     },
@@ -25,7 +25,7 @@ const Highlights = () => {
 
   const StyledHeader = styled('h1')(({ theme }) => ({
     textAlign: 'center',
-    color: theme.palette.primary.main,
+    color: theme.palette.secondary.contrastText,
     padding: '32px',
     margin: '0px',
     fontSize: '2.0rem',
