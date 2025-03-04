@@ -20,7 +20,14 @@ const Filter = () => {
         <Grid2 container display={'flex'} flexDirection={'column'} spacing={3} height={'100%'} padding={'5vh 1vh 0px 1vh'}>
           <Grid2 display={'flex'} justifyContent={'space-between'}>
             <Input placeholder={filterInput === '' ? 'Pesquisar produtos' : filterInput} onChange={(e) => setFilterInput(e.target.value)} value={filterInput} />
-            <Button onClick={() => FilterItemsByName(filterInput)}>Pesquisar</Button>
+            <Button
+              onClick={() => {
+                FilterItemsByName(filterInput)
+                window.scrollTo(0, 0)
+              }}
+            >
+              Pesquisar
+            </Button>
           </Grid2>
           {categories.map((category) => {
             return (
