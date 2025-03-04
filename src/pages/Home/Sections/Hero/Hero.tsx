@@ -2,6 +2,7 @@ import { Grid2, styled } from '@mui/material'
 import HeroImg from '../../../../assets/Imgs/HeroImg.jpg'
 import DefaultButton from '../../../../components/Buttons/DefaultButton'
 import { Link } from 'react-router-dom'
+import { ScrollTo } from '../../../../components/NavBar/NavBar'
 
 const Hero = () => {
   const StyledHero = styled('div')(() => ({
@@ -38,9 +39,7 @@ const Hero = () => {
         <StyledImg src={HeroImg} />
         <StyledDiv>
           <StyledLogo>Franco Gagnor</StyledLogo>
-          <Link to="/shop" onClick={() => window.scrollTo(0, 0)}>
-            <DefaultButton>Compre Agora!</DefaultButton>
-          </Link>
+          <DefaultButton onClick={() => ScrollTo('highlights')}>Compre Agora!</DefaultButton>
         </StyledDiv>
       </Grid2>
     </StyledHero>

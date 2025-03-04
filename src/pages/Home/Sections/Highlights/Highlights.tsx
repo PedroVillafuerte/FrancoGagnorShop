@@ -32,7 +32,7 @@ const Highlights = () => {
   }))
 
   return (
-    <StyledHighLight>
+    <StyledHighLight id="highlights">
       <StyledHeader>CONHEÇA NOSSOS PRODUTOS</StyledHeader>
       <Grid2 container textAlign="center" display="flex" flexDirection="row" justifyContent="space-evenly" gap={4} padding={'70px 0'} margin={'0 80px'}>
         {categories.map((category, index) => {
