@@ -1,5 +1,5 @@
 import { Grid2, styled, Typography } from '@mui/material'
-import PlaceHolder from '../../assets/Imgs/PlaceHolder.jpg'
+import PlaceHolder from '../../assets/Imgs/Aquario4.png'
 import DefaultButton from '../../components/Buttons/DefaultButton'
 
 const Contact = () => {

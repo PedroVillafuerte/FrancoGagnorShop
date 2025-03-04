@@ -1,5 +1,5 @@
 import { Grid2, styled } from '@mui/material'
-import PlaceHolder from '../../../../assets/Imgs/PlaceHolder.jpg'
+import PlaceHolder from '../../../../assets/Imgs/aquario3.png'
 import LocalMallIcon from '@mui/icons-material/LocalMall'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp'
 import InstagramIcon from '@mui/icons-material/Instagram'
