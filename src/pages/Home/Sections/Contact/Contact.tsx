@@ -19,22 +19,27 @@ const Contact = () => {
     const StyledLink = styled("a")(({ theme }) => ({
         textDecoration: "none",
         cursor: "pointer",
-        fontSize: "2rem",
+        fontSize: "2.5rem",
+        height:"15vw",
         color: theme.palette.secondary.main,
-        width: "max-content",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        alignSelf:"center",
-        '&:hover': {
-
-        }
+        justifyContent:"center",
+        [theme.breakpoints.down('md')]: {
+            height: '75%',
+            fontSize: '7vw',
+        },
     }))
 
     const StyledLinks = styled("div")(({ theme }) => ({
         border: "solid 5px",
         borderRadius: "50px",
-        borderColor: theme.palette.secondary.main
+        borderColor: theme.palette.secondary.main,
+        margin:"0 30px",
+        [theme.breakpoints.down('md')]: {
+            height:"40vh",
+        },
     }))
 
     const StyledTitle = styled("div")(({ theme }) => ({
@@ -42,21 +47,25 @@ const Contact = () => {
         fontFamily: "sans-serif",
         padding: "1rem",
         color: theme.palette.primary.contrastText,
+        margin:"2rem 0"
     }))
 
     const StyledSubText = styled("div")(({ theme }) => ({
         fontSize: "1rem",
         color: theme.palette.secondary.main,
+        [theme.breakpoints.down('md')]: {
+            fontSize: '3vw',
+        },
     }))
 
     return (
         <StyledContact>
             <Grid2 container sx={{ justifyContent: "space-between", alignItems: "center", textAlign: "center" }}>
-                <Grid2 size={{ xs: 12, md: 7 }} height={{ xs: '50vh', md: '100vh' }} alignItems="center">
+                <Grid2 size={{ xs: 12, md: 7 }} height={{ xs: '70vh', md: '100vh' }} alignItems="center">
                     <StyledTitle>Contatos</StyledTitle>
                     <StyledLinks>
-                        <Grid2 container display={"flex"} flexDirection={'row'} justifyContent={'space-evenly'}>
-                            <Grid2 size={6} display='flex' alignSelf={'center'}>
+                        <Grid2 container display={"flex"} flexDirection={'row'} justifyContent={'space-evenly'} sx={{ height: { xs: '40vh', sm: '100%', md: '100%' } }}>
+                            <Grid2 size={6}>
                                 <StyledLink href="https://web.whatsapp.com/send/?phone=5521984935124">
                                     <WhatsAppIcon /> WhatsApp <StyledSubText>+21 99999-9999</StyledSubText>
                                 </StyledLink>
