@@ -36,15 +36,15 @@ const NavBar = () => {
           </Grid2>
           <Grid2 container>
             <Link style={{ textDecoration: 'none' }} to="/" onClick={() => window.scrollTo(0, 0)}>
-              <StyledMenuIcon>Home</StyledMenuIcon>
+              <StyledMenuIcon>Inicio</StyledMenuIcon>
             </Link>
 
             <Link style={{ textDecoration: 'none' }} to="/about">
-              <StyledMenuIcon onClick={() => window.scrollTo(0, 0)}>About</StyledMenuIcon>
+              <StyledMenuIcon onClick={() => window.scrollTo(0, 0)}>Sobre</StyledMenuIcon>
             </Link>
 
             <Link style={{ textDecoration: 'none' }} to="/shop">
-              <StyledMenuIcon onClick={() => window.scrollTo(0, 0)}>Shop</StyledMenuIcon>
+              <StyledMenuIcon onClick={() => window.scrollTo(0, 0)}>Produtos</StyledMenuIcon>
             </Link>
           </Grid2>
         </StyledToolbar>

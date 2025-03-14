@@ -67,7 +67,7 @@ const Contact = () => {
             <Grid2 container display={'flex'} flexDirection={'row'} justifyContent={'space-evenly'} sx={{ height: { xs: '40vh', sm: '100%', md: '100%' } }}>
               <Grid2 size={6}>
                 <StyledLink href="https://web.whatsapp.com/send/?phone=5521984935124">
-                  <WhatsAppIcon /> WhatsApp <StyledSubText>+21 99999-9999</StyledSubText>
+                  <WhatsAppIcon /> WhatsApp <StyledSubText>+21 98493-5124</StyledSubText>
                 </StyledLink>
               </Grid2>
               <Grid2 size={6}>
