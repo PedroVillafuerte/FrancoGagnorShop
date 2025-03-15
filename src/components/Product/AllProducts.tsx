@@ -241,6 +241,19 @@ const AllProducts = [
       link: 'https://www.google.com',
     },
   },
+
+  ...Array.from({ length: 100 }, (_, i) => ({
+    id: (20 + i).toString(),
+    category: 'Areia para gaiola',
+    name: `Produto${20 + i}`,
+    img: placeHolder,
+    price: 100,
+    description: `Descrição do Produto${20 + i} completa`,
+    button: {
+      label: 'Comprar',
+      link: 'https://www.google.com',
+    },
+  })),
 ]
 
 export default AllProducts
