@@ -2,6 +2,7 @@ import { Grid2, styled, Typography } from '@mui/material'
 import Product from '../../components/Product/Product'
 import Filter from './ShopFilter'
 import { useShopContext } from '../../contexts/ShopContext'
+import ShopPagesButton from '../../components/Buttons/ShopPagesButton'
 
 const Shop = () => {
   const StyledProducts = styled('div')(({ theme }) => ({
@@ -9,6 +10,22 @@ const Shop = () => {
     height: '100%',
     minHeight: '100vh',
   }))
+
+  const StyledPages = styled('div')(({ theme }) => ({
+    backgroundColor: theme.palette.primary.light,
+  }))
+
+  // const StyledPagesButton = styled('button')(({ theme }) => ({
+  //   color: theme.palette.secondary.contrastText,
+  //   backgroundColor: 'transparent',
+  //   border: '0px',
+  //   padding: '0px',
+  //   '&:hover': {
+  //     backgroundColor: theme.palette.primary.main,
+  //     transform: 'scale(1.1)',
+  //     cursor: 'pointer',
+  //   },
+  // }))
 
   const { products, currentPage, setCurrentPage } = useShopContext()
   const productsPerPage = 8
@@ -22,21 +39,32 @@ const Shop = () => {
   }
   const pages = []
   const startPage = Math.min(Math.max(1, currentPage - 2), Math.max(1, totalPages - 4))
-  console.log(currentPage)
+
   for (let i = startPage; i < startPage + 5; i++) {
+    // if (currentPage > 1 && i === startPage) pages.push(<ShopPagesButton onClick={() => handlePageChange(currentPage - 1)}>{'< Anterior'}</ShopPagesButton>)
+
     if (i > totalPages) break
     if (i <= 0) continue
     if (startPage > 1 && i === startPage) {
-      pages.push(<button>...</button>)
+      pages.push(<ShopPagesButton onClick={() => handlePageChange(1)}>1</ShopPagesButton>)
+      if (startPage > 2) {
+        pages.push(<ShopPagesButton disabled={true}>...</ShopPagesButton>)
+      }
     }
     pages.push(
-      <button onClick={() => handlePageChange(i)} disabled={i === currentPage}>
+      <ShopPagesButton onClick={() => handlePageChange(i)} disabled={i === currentPage} selected={i === currentPage}>
         {i}
-      </button>
+      </ShopPagesButton>
     )
-    if (startPage + 4 === i && startPage + 5 < totalPages) {
-      pages.push(<button>...</button>)
+    if (startPage + 4 === i && startPage + 4 < totalPages) {
+      if (i < totalPages - 1) {
+        pages.push(<ShopPagesButton disabled={true}>...</ShopPagesButton>)
+      }
+      pages.push(<ShopPagesButton onClick={() => handlePageChange(totalPages)}>{totalPages}</ShopPagesButton>)
     }
+
+    // if (currentPage < totalPages && (i === startPage + 4 || i === totalPages))
+    //   pages.push(<ShopPagesButton onClick={() => handlePageChange(currentPage + 1)}>{'Seguinte >'}</ShopPagesButton>)
   }
   const currentPagesProducts = products.slice((currentPage - 1) * productsPerPage, currentPage * productsPerPage)
 
@@ -60,11 +88,27 @@ const Shop = () => {
             })}
           </Grid2>
         </StyledProducts>
-        <Grid2 display={'flex'} justifyContent={'center'}>
-          <button onClick={() => handlePageChange(currentPage - 1)}>{'<'}</button>
-          {pages}
-          <button onClick={() => handlePageChange(currentPage + 1)}>{'>'}</button>
-        </Grid2>
+        <StyledPages>
+          <Grid2 container display={'flex'} justifyContent={'center'}>
+            <Grid2 size={3} display={'flex'} justifyContent={'center'}>
+              {currentPage > 1 && (
+                <ShopPagesButton onClick={() => handlePageChange(currentPage - 1)} isNumber={false}>
+                  {'< Anterior'}
+                </ShopPagesButton>
+              )}
+            </Grid2>
+            <Grid2 size={6} display={'flex'} justifyContent={'center'}>
+              {pages}
+            </Grid2>
+            <Grid2 size={3} display={'flex'} justifyContent={'center'}>
+              {currentPage < totalPages && (
+                <ShopPagesButton onClick={() => handlePageChange(currentPage + 1)} isNumber={false}>
+                  {'Seguinte >'}{' '}
+                </ShopPagesButton>
+              )}
+            </Grid2>
+          </Grid2>
+        </StyledPages>
       </Grid2>
     </Grid2>
   )
