@@ -4,7 +4,6 @@ Ajuste gerel:
 
 Versão 1.0(Somente desktop):
 
-- Sobre, Aumentar horizontalmente texto e dividir em paragrafos
 
 Versão 2.0(Arrumando mobile):
 - Navbar, Decidir como deixar nav para mobile

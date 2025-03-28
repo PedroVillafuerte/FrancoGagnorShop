@@ -21,6 +21,10 @@ let theme = createTheme({
   },
   typography: {
     fontFamily: 'Quicksand',
+    body2:{
+      textIndent: '2rem',
+      fontSize: '1rem',
+    }
   },
   components: {
     MuiCssBaseline: {
