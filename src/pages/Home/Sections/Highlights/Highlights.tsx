@@ -32,9 +32,15 @@ const Highlights = () => {
     textAlign: 'center',    
   }))
 
+  const StyledPapers = styled('div')(() => ({
+    minHeight:'70vh',
+    alignContent:'center'
+  }))
+
   return (
     <StyledHighLight id="highlights">
       <StyledHeader>Conheça Nossos Produtos</StyledHeader>
+      <StyledPapers>
       <Grid2 container textAlign="center" display="flex" flexDirection="row" justifyContent="space-evenly">
         {categories.map((category, index) => {
           return (
@@ -60,6 +66,7 @@ const Highlights = () => {
           )
         })}
       </Grid2>
+      </StyledPapers>
     </StyledHighLight>
   )
 }

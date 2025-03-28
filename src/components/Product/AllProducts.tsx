@@ -3,7 +3,7 @@ import placeHolder from '../../assets/Imgs/LogoFG.jpg'
 const AllProducts = [
   {
     id: '0',
-    category: 'Substratos para aquários',
+    category: 'Substrato para aquários',
     name: 'Produto1',
     img: placeHolder,
     price: 'R$ 100,00',
@@ -15,7 +15,7 @@ const AllProducts = [
   },
   {
     id: '1',
-    category: 'Condicionadores de água',
+    category: 'Condicionado de água',
     name: 'Produto2',
     img: placeHolder,
     price: 'R$ 100,00',
@@ -27,7 +27,7 @@ const AllProducts = [
   },
   {
     id: '2',
-    category: 'Bonsais e Terrários',
+    category: 'Bonsai e Terrário',
     name: 'Produto3',
     img: placeHolder,
     price: 'R$ 100,00',
