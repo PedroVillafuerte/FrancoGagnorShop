@@ -5,13 +5,14 @@ const Contact = () => {
   const StyledAbout = styled('div')(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.primary.contrastText,
-    // minHeight: '100vh',
+    minHeight: '90vh',
     display: 'flex',
     alignItems: 'center',
   }))
 
   const StyledImg = styled('img')(() => ({
-    height: '100%',
+    height: '90vh',
+    objectFit: 'cover',
     width: '100%',
   }))
 
