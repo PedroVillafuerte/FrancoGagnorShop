@@ -15,7 +15,7 @@ const AllProducts = [
   },
   {
     id: '1',
-    category: 'Condicionado de água',
+    category: 'Condicionador de água',
     name: 'Produto2',
     img: placeHolder,
     price: 'R$ 100,00',
