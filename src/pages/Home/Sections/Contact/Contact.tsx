@@ -8,7 +8,6 @@ import FacebookIcon from '@mui/icons-material/Facebook'
 const Contact = () => {
   const StyledContact = styled('div')(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
-    height: '100vh',
   }))
 
   const StyledImg = styled('img')(() => ({
@@ -42,9 +41,8 @@ const Contact = () => {
     },
   }))
 
-  const StyledTitle = styled('div')(({ theme }) => ({
+  const StyledTitle = styled('h1')(({ theme }) => ({
     fontSize: '4rem',
-    fontFamily: 'sans-serif',
     padding: '1rem',
     color: theme.palette.secondary.contrastText,
     margin: '2rem 0',
