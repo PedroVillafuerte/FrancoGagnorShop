@@ -5,7 +5,7 @@ const Contact = () => {
   const StyledAbout = styled('div')(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.primary.contrastText,
-    minHeight: '100vh',
+    // minHeight: '100vh',
     display: 'flex',
     alignItems: 'center',
   }))
@@ -24,12 +24,14 @@ const Contact = () => {
   const StyledText = styled(Grid2)(({ theme }) => ({
     padding: '1vh 5vh 1vh 10vh',
     backgroundColor: theme.palette.primary.contrastText,
+    borderTopLeftRadius: '100px',
+    borderBottomLeftRadius: '100px',
   }))
 
   return (
     <StyledAbout>
-      <Grid2 container display={'flex'} alignItems={'stretch'} justifyContent={'right'} spacing={2} mr={1}>
-        <StyledText size={4} display={'flex'} flexDirection={'column'} justifyContent={'space-around'}>
+      <Grid2 container display={'flex'} alignItems={'center'} justifyContent={'right'}>
+        <StyledText size={5} display={'flex'} flexDirection={'column'} justifyContent={'space-around'}>
           <StyledTitle>Sobre Nós</StyledTitle>
           <Typography color="secondary.contrastText" textAlign={'left'} width={'fit-content'}>
             Aquarista desde a infância, tem como hobby o cultivo de plantas aquáticas. Sócio fundador da ACAPI ( Associação Carioca de Aquariofilia, Piscicultura e Ictiologia ) que
@@ -43,7 +45,7 @@ const Contact = () => {
             sem sofisticação desnecessária mas por um preço honesto.
           </Typography>
         </StyledText>
-        <Grid2 size={6}>
+        <Grid2 size={6} display={'flex'}>
           <StyledImg src={PlaceHolder} />
         </Grid2>
       </Grid2>
