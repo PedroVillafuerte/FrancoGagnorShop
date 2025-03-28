@@ -1,8 +1,11 @@
 import { AppBar, Grid2, MenuItem, styled, Toolbar } from '@mui/material'
 import Logo2 from '../../assets/Imgs/FGLowRes-NoBg-Light.png'
 import { Link } from 'react-router-dom'
+import { useShopContext } from '../../contexts/ShopContext'
 
 const NavBar = () => {
+  const { ResetFilters } = useShopContext()
+
   const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     justifyContent: 'space-between',
     padding: 24,
@@ -44,7 +47,14 @@ const NavBar = () => {
             </Link>
 
             <Link style={{ textDecoration: 'none' }} to="/shop">
-              <StyledMenuIcon onClick={() => window.scrollTo(0, 0)}>Produtos</StyledMenuIcon>
+              <StyledMenuIcon
+                onClick={() => {
+                  window.scrollTo(0, 0)
+                  ResetFilters()
+                }}
+              >
+                Produtos
+              </StyledMenuIcon>
             </Link>
           </Grid2>
         </StyledToolbar>

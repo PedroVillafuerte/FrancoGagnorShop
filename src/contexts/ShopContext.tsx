@@ -12,6 +12,7 @@ type ShopContext = {
   setCurrentCategory: React.Dispatch<React.SetStateAction<string>>
   FilterItemsByName: (value: string) => void
   FilterItemsByCategory: (cat: string) => void
+  ResetFilters: () => void
 }
 
 export const ShopContext = createContext<ShopContext | null>(null)
@@ -49,9 +50,27 @@ export const ShopContextProvider: FC<PropsWithChildren> = ({ children }) => {
     )
   }
 
+  const ResetFilters = () => {
+    setCurrentCategory('')
+    setCurrentPage(1)
+    setProducts(allProducts)
+  }
+
   return (
     <ShopContext.Provider
-      value={{ allProducts, products, setProducts, categories, currentPage, setCurrentPage, currentCategory, setCurrentCategory, FilterItemsByName, FilterItemsByCategory }}
+      value={{
+        allProducts,
+        products,
+        setProducts,
+        categories,
+        currentPage,
+        setCurrentPage,
+        currentCategory,
+        setCurrentCategory,
+        FilterItemsByName,
+        FilterItemsByCategory,
+        ResetFilters,
+      }}
     >
       {children}
     </ShopContext.Provider>

@@ -4,7 +4,7 @@ import React from 'react'
 type ProductProps = {
   name?: string
   img?: string
-  price?: number
+  price?: string
   description?: string
   button?: ButtonProps
 }
@@ -17,7 +17,7 @@ type ButtonProps = {
 const Product: React.FC<ProductProps> = ({ name, img, price, description, button }) => {
   name = name ? name : 'Produto'
   img = img ? img : ''
-  price = price ? price : 100
+  price = price ? price : '100,00'
   description = description ? description : 'Descrição do produto'
   button = button ? button : { label: 'Comprar', link: 'https://www.google.com' }
 
