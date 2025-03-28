@@ -13,6 +13,7 @@ const Contact = () => {
   const StyledImg = styled('img')(() => ({
     height: '100%',
     width: '100%',
+    objectFit: 'cover',
   }))
 
   const StyledLink = styled('a')(({ theme }) => ({
