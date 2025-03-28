@@ -23,6 +23,7 @@ const Hero = () => {
     color: theme.palette.primary.contrastText,
     fontSize: '8vw',
     paddingBottom: '1rem',
+    textAlign:'center',
   }))
 
   const StyledDiv = styled('div')(() => ({
@@ -39,7 +40,7 @@ const Hero = () => {
         <StyledImg src={HeroImg} />
         <StyledDiv>
           <StyledLogo>
-            <Typography fontSize={150} letterSpacing={2.5} fontWeight={'light'}>
+            <Typography fontSize={95} letterSpacing={2.5} fontWeight={'light'}>
               Franco Gagnor
             </Typography>
           </StyledLogo>
