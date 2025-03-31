@@ -1,10 +1,11 @@
-import { Grid2, styled, Typography } from '@mui/material'
+import { Grid2, Modal, styled, Typography, useMediaQuery } from '@mui/material'
 import Product from '../../components/Product/Product'
 import Filter from './ShopFilter'
 import { useShopContext } from '../../contexts/ShopContext'
 import ShopPagesButton from '../../components/Buttons/ShopPagesButton'
 
 const Shop = () => {
+
   const StyledProducts = styled('div')(({ theme }) => ({
     backgroundColor: theme.palette.primary.light,
     height: '100%',
@@ -15,19 +16,7 @@ const Shop = () => {
     backgroundColor: theme.palette.primary.light,
   }))
 
-  // const StyledPagesButton = styled('button')(({ theme }) => ({
-  //   color: theme.palette.secondary.contrastText,
-  //   backgroundColor: 'transparent',
-  //   border: '0px',
-  //   padding: '0px',
-  //   '&:hover': {
-  //     backgroundColor: theme.palette.primary.main,
-  //     transform: 'scale(1.1)',
-  //     cursor: 'pointer',
-  //   },
-  // }))
-
-  const { products, currentPage, setCurrentPage } = useShopContext()
+  const { products, currentPage, setCurrentPage, ScreenMdUp } = useShopContext()
   const productsPerPage = 8
   const totalPages = Math.ceil(products.length / productsPerPage)
 
@@ -41,7 +30,6 @@ const Shop = () => {
   const startPage = Math.min(Math.max(1, currentPage - 2), Math.max(1, totalPages - 4))
 
   for (let i = startPage; i < startPage + 5; i++) {
-    // if (currentPage > 1 && i === startPage) pages.push(<ShopPagesButton onClick={() => handlePageChange(currentPage - 1)}>{'< Anterior'}</ShopPagesButton>)
 
     if (i > totalPages) break
     if (i <= 0) continue
@@ -62,9 +50,6 @@ const Shop = () => {
       }
       pages.push(<ShopPagesButton onClick={() => handlePageChange(totalPages)}>{totalPages}</ShopPagesButton>)
     }
-
-    // if (currentPage < totalPages && (i === startPage + 4 || i === totalPages))
-    //   pages.push(<ShopPagesButton onClick={() => handlePageChange(currentPage + 1)}>{'Seguinte >'}</ShopPagesButton>)
   }
   const currentPagesProducts = products.slice((currentPage - 1) * productsPerPage, currentPage * productsPerPage)
 
@@ -73,7 +58,7 @@ const Shop = () => {
       <Grid2 display={'flex'} size={2} alignItems={'stretch'}>
         <Filter />
       </Grid2>
-      <Grid2 size={10} height={'100%'}>
+      <Grid2 size={{ sm: 12, md: 10 }} height={'100%'}>
         <StyledProducts>
           <Typography color="secondary.contrastText" textAlign={'center'} variant="h2" fontWeight={'400'}>
             Produtos

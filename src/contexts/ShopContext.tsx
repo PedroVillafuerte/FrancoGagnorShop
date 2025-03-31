@@ -1,5 +1,6 @@
 import React, { createContext, FC, PropsWithChildren, useContext, useState } from 'react'
 import AllProducts from '../components/Product/AllProducts'
+import { useMediaQuery } from '@mui/material'
 
 type ShopContext = {
   allProducts: typeof AllProducts
@@ -8,11 +9,14 @@ type ShopContext = {
   categories: string[]
   currentPage: number
   setCurrentPage: React.Dispatch<React.SetStateAction<number>>
+  mobileFilterOpened: boolean
+  setMobileFilterOpened: React.Dispatch<React.SetStateAction<boolean>>
   currentCategory: string
   setCurrentCategory: React.Dispatch<React.SetStateAction<string>>
   FilterItemsByName: (value: string) => void
   FilterItemsByCategory: (cat: string) => void
   ResetFilters: () => void
+  ScreenMdUp: boolean
 }
 
 export const ShopContext = createContext<ShopContext | null>(null)
@@ -20,7 +24,10 @@ export const ShopContext = createContext<ShopContext | null>(null)
 export const ShopContextProvider: FC<PropsWithChildren> = ({ children }) => {
   const [currentCategory, setCurrentCategory] = React.useState('')
   const [currentPage, setCurrentPage] = useState(1)
+  const [mobileFilterOpened, setMobileFilterOpened] = useState(false)
   const [products, setProducts] = useState(AllProducts)
+  const ScreenMdUp = useMediaQuery((theme) => theme.breakpoints.up('md'))
+
   const categories = [...new Set(AllProducts.map((product) => product.category))]
   const allProducts = AllProducts
 
@@ -70,6 +77,9 @@ export const ShopContextProvider: FC<PropsWithChildren> = ({ children }) => {
         FilterItemsByName,
         FilterItemsByCategory,
         ResetFilters,
+        mobileFilterOpened,
+        setMobileFilterOpened,
+        ScreenMdUp,
       }}
     >
       {children}
