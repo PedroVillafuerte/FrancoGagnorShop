@@ -18,7 +18,10 @@ const Contact = () => {
     [theme.breakpoints.up('md')]: {
       width: '100%',
       height: '90vh',
-      
+    },
+    [theme.breakpoints.between('md','lg')]:{
+      minHeight:'120vh',
+      width: '100%',      
     },
   }))
 
@@ -45,6 +48,9 @@ const Contact = () => {
       borderBottomLeftRadius: '90px',
       borderTopLeftRadius: '90px',
       padding: '2rem',
+    },
+    [theme.breakpoints.between('sm','md')]:{
+      minHeight:'80vh',     
     },
   }))
 
