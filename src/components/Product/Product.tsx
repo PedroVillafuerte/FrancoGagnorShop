@@ -4,7 +4,6 @@ import React from 'react'
 type ProductProps = {
   name?: string
   img?: string
-  price?: string
   description?: string
   button?: ButtonProps
 }
@@ -14,10 +13,9 @@ type ButtonProps = {
   link: string
 }
 
-const Product: React.FC<ProductProps> = ({ name, img, price, description, button }) => {
+const Product: React.FC<ProductProps> = ({ name, img, description, button }) => {
   name = name ? name : 'Produto'
   img = img ? img : ''
-  price = price ? price : '100,00'
   description = description ? description : 'Descrição do produto'
   button = button ? button : { label: 'Comprar', link: 'https://www.google.com' }
 
@@ -74,9 +72,9 @@ const Product: React.FC<ProductProps> = ({ name, img, price, description, button
           <Typography variant="h6" textAlign={'left'} color="secondary.contrastText">
             {description}
           </Typography>
-          <Typography variant="h4" fontWeight={'bold'} color="secondary.contrastText">
+          {/* <Typography variant="h4" fontWeight={'bold'} color="secondary.contrastText">
             {price}
-          </Typography>
+          </Typography> */}
         </Grid2>
         {/* <StyledButton
           onClick={() => {

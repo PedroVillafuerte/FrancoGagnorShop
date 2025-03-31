@@ -82,7 +82,7 @@ const Shop = () => {
             {currentPagesProducts.map((product) => {
               return (
                 <Grid2 key={product.id} size={3}>
-                  <Product name={product.name} img={product.img} price={product.price} description={product.description} button={product.button} />
+                  <Product name={product.name} img={product.img} description={product.description} button={product.button} />
                 </Grid2>
               )
             })}

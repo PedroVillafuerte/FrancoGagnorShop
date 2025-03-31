@@ -6,7 +6,6 @@ const AllProducts = [
     category: 'Substrato para aquários',
     name: 'Produto1',
     img: placeHolder,
-    price: 'R$ 100,00',
     description: 'Descição do Produto1 completa',
     button: {
       label: 'Comprar',
@@ -18,7 +17,6 @@ const AllProducts = [
     category: 'Condicionador de água',
     name: 'Produto2',
     img: placeHolder,
-    price: 'R$ 100,00',
     description: 'Descição do Produto1 completa',
     button: {
       label: 'Comprar',
@@ -30,7 +28,6 @@ const AllProducts = [
     category: 'Bonsai e Terrário',
     name: 'Produto3',
     img: placeHolder,
-    price: 'R$ 100,00',
     description: 'Descição do Produto1 completa',
     button: {
       label: 'Comprar',
@@ -42,7 +39,6 @@ const AllProducts = [
     category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
-    price: 'R$ 100,00',
     description: 'Descição do Produto1 completa',
     button: {
       label: 'Comprar',
@@ -54,7 +50,6 @@ const AllProducts = [
     category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
-    price: 'R$ 100,00',
     description: 'Descição do Produto1 completa',
     button: {
       label: 'Comprar',
@@ -66,7 +61,6 @@ const AllProducts = [
     category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
-    price: 'R$ 100,00',
     description: 'Descição do Produto1 completa',
     button: {
       label: 'Comprar',
@@ -78,7 +72,6 @@ const AllProducts = [
     category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
-    price: 'R$ 100,00',
     description: 'Descição do Produto1 completa',
     button: {
       label: 'Comprar',
@@ -90,7 +83,6 @@ const AllProducts = [
     category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
-    price: 'R$ 100,00',
     description: 'Descição do Produto1 completa',
     button: {
       label: 'Comprar',
@@ -102,7 +94,6 @@ const AllProducts = [
     category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
-    price: 'R$ 100,00',
     description: 'Descição do Produto1 completa',
     button: {
       label: 'Comprar',
@@ -114,7 +105,6 @@ const AllProducts = [
     category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
-    price: 'R$ 100,00',
     description: 'Descição do Produto1 completa',
     button: {
       label: 'Comprar',
@@ -126,7 +116,6 @@ const AllProducts = [
     category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
-    price: 'R$ 100,00',
     description: 'Descição do Produto1 completa',
     button: {
       label: 'Comprar',
@@ -138,7 +127,6 @@ const AllProducts = [
     category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
-    price: 'R$ 100,00',
     description: 'Descição do Produto1 completa',
     button: {
       label: 'Comprar',
@@ -150,7 +138,6 @@ const AllProducts = [
     category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
-    price: 'R$ 100,00',
     description: 'Descição do Produto1 completa',
     button: {
       label: 'Comprar',
@@ -162,7 +149,6 @@ const AllProducts = [
     category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
-    price: 'R$ 100,00',
     description: 'Descição do Produto1 completa',
     button: {
       label: 'Comprar',
@@ -174,7 +160,6 @@ const AllProducts = [
     category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
-    price: 'R$ 100,00',
     description: 'Descição do Produto1 completa',
     button: {
       label: 'Comprar',
@@ -186,7 +171,6 @@ const AllProducts = [
     category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
-    price: 'R$ 100,00',
     description: 'Descição do Produto1 completa',
     button: {
       label: 'Comprar',
@@ -198,7 +182,6 @@ const AllProducts = [
     category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
-    price: 'R$ 100,00',
     description: 'Descição do Produto1 completa',
     button: {
       label: 'Comprar',
@@ -210,7 +193,6 @@ const AllProducts = [
     category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
-    price: 'R$ 100,00',
     description: 'Descição do Produto1 completa',
     button: {
       label: 'Comprar',
@@ -222,7 +204,6 @@ const AllProducts = [
     category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
-    price: 'R$ 100,00',
     description: 'Descição do Produto1 completa',
     button: {
       label: 'Comprar',
@@ -234,7 +215,6 @@ const AllProducts = [
     category: 'Areia para gaiola',
     name: 'Produto4',
     img: placeHolder,
-    price: 'R$ 100,00',
     description: 'Descição do Produto1 completa',
     button: {
       label: 'Comprar',
@@ -247,7 +227,6 @@ const AllProducts = [
     category: 'Areia para gaiola',
     name: `Produto${20 + i}`,
     img: placeHolder,
-    price: 'R$ 100,00',
     description: `Descrição do Produto${20 + i} completa`,
     button: {
       label: 'Comprar',
