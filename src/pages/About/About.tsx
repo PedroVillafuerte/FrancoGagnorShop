@@ -10,29 +10,48 @@ const Contact = () => {
     alignItems: 'center',
   }))
 
-  const StyledImg = styled('img')(() => ({
-    height: '90vh',
+  const StyledImg = styled('img')(({ theme }) => ({
     objectFit: 'cover',
-    width: '100%',
+    [theme.breakpoints.down('md')]: {
+      minWidth:'100vw'
+    },
+    [theme.breakpoints.up('md')]: {
+      width: '100%',
+      height: '90vh',
+      
+    },
   }))
 
   const StyledTitle = styled('div')(({ theme }) => ({
     fontSize: '4rem',
     width: '100%',
     color: theme.palette.secondary.contrastText,
+    [theme.breakpoints.down('md')]: {
+      fontSize: '3rem',
+    },
   }))
 
   const StyledText = styled(Grid2)(({ theme }) => ({
-    padding: '1vh 5vh 1vh 10vh',
     backgroundColor: theme.palette.primary.contrastText,
-    borderTopLeftRadius: '100px',
-    borderBottomLeftRadius: '100px',
+    [theme.breakpoints.down('md')]: {
+      borderBottomLeftRadius: '50px',
+      borderBottomRightRadius: '50px',
+      padding: '1rem',
+      marginBottom:'1rem',
+      minHeight:'110vh',
+    },
+    [theme.breakpoints.up('md')]: {
+      minHeight:'75vh',
+      borderBottomLeftRadius: '90px',
+      borderTopLeftRadius: '90px',
+      padding: '2rem',
+    },
   }))
 
   return (
     <StyledAbout>
-      <Grid2 container display={'flex'} alignItems={'center'} justifyContent={'right'}>
-        <StyledText size={5} display={'flex'} flexDirection={'column'} justifyContent={'space-around'}>
+      <Grid2 container display={'flex'} flexDirection={{xs:'column-reverse', md:'row'}} alignItems={'center'} justifyContent={'right'}>
+        <StyledText size={{ xs: 10, md: 5 }} display={'flex'} flexDirection={'column'} justifyContent={'space-around'}>
           <StyledTitle>Sobre Nós</StyledTitle>
           <Typography variant='body2' color="secondary.contrastText" textAlign={'left'} width={'fit-content'}>
             Aquarista desde a infância, tem como hobby o cultivo de plantas aquáticas. Sócio fundador da ACAPI ( Associação Carioca de Aquariofilia, Piscicultura e Ictiologia ) que
@@ -51,7 +70,7 @@ const Contact = () => {
             sem sofisticação desnecessária mas por um preço honesto.
           </Typography>
         </StyledText>
-        <Grid2 size={6} display={'flex'}>
+        <Grid2 size={{ xs: 12, md: 5 }} display={'flex'}>
           <StyledImg src={PlaceHolder} />
         </Grid2>
       </Grid2>
