@@ -49,6 +49,9 @@ const Contact = () => {
       borderTopLeftRadius: '90px',
       padding: '2rem',
     },
+    [theme.breakpoints.between('sm','md')]:{
+      minHeight:'80vh',     
+    },
   }))
 
   return (
