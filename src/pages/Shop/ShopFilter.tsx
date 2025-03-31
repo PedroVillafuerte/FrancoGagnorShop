@@ -2,6 +2,8 @@ import { Button, Grid2, Input, Modal, styled, Typography } from '@mui/material'
 import { useState } from 'react'
 import { useShopContext } from '../../contexts/ShopContext'
 import CategoryButton from './CategoryButton'
+import CloseIcon from '@mui/icons-material/Close';
+import FilterListIcon from '@mui/icons-material/FilterList';
 
 const StyledFitler = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -93,11 +95,11 @@ const Filter = () => {
         </StyledFitler>
       ) :
         <>
-          <a onClick={() => setMobileFilterOpened(true)}>aqui</a>
+          <a style={{ position: 'absolute' }} onClick={() => setMobileFilterOpened(true)}><FilterListIcon /></a>
           <StyledMobileFilter open={mobileFilterOpened} onClose={() => setMobileFilterOpened(false)}>
 
             <StyledFitler>
-              <a style={{ position: 'absolute' }} onClick={() => setMobileFilterOpened(false)}>aqui</a>
+              <a style={{ position: 'absolute' }} onClick={() => setMobileFilterOpened(false)}><CloseIcon /></a>
 
               <Grid2 container display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'} width={'100%'} height={'100%'} padding={'5vh 0vh 0px 0vh'}>
 
@@ -120,7 +122,7 @@ const Filter = () => {
                   </StyledButton>
                 </Grid2>
 
-                <Grid2 container size={12} flexDirection={'row'} gap={2} justifyContent={'center'} paddingBottom={5}>
+                <Grid2 container size={12} flexDirection={'row'} gap={2} justifyContent={'center'} paddingBottom={10}>
                   {categories.map((category) => {
                     return (
                       <Grid2 size={5} borderColor={'secondary.contrastText'}>

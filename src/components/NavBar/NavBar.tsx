@@ -8,6 +8,7 @@ const NavBar = () => {
 
   const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     justifyContent: 'space-between',
+    height: '10vh',
     padding: 24,
     backgroundColor: theme.palette.primary.dark,
     overflow: 'hidden',
@@ -21,7 +22,7 @@ const NavBar = () => {
     },
   }))
 
-  const StyledLogo = styled('img')(({}) => ({
+  const StyledLogo = styled('img')(({ }) => ({
     height: '5vh',
     '&:hover': {
       cursor: 'pointer',
