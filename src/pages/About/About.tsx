@@ -20,7 +20,8 @@ const Contact = () => {
       height: '90vh',
     },
     [theme.breakpoints.between('md','lg')]:{
-      minHeight:'120vh',      
+      minHeight:'120vh',
+      width: '100%',      
     },
   }))
 
