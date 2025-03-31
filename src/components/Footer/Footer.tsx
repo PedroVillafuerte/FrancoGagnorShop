@@ -9,7 +9,8 @@ const Footer = () => {
     display: 'flex',
     backgroundColor: theme.palette.primary.dark,
     color: theme.palette.primary.contrastText,
-    padding: '20px',
+    paddingTop: '30px',
+    paddingBottom: '10px',
   }))
 
   const StyledLink = styled('a')(({ theme }) => ({
@@ -46,7 +47,7 @@ const Footer = () => {
           </Grid2>
         </Grid2>
         <Grid2>
-          <Typography maxWidth={'max-content'} borderTop={1} pt={2} mt={2} marginLeft={'auto'} marginRight={'auto'}>
+          <Typography maxWidth={'max-content'} borderTop={1} pt={3} mt={3} marginLeft={'auto'} marginRight={'auto'}>
             © Franco Gagnor - All rights reserved.
           </Typography>
         </Grid2>
